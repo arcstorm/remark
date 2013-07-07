@@ -1,0 +1,3 @@
+remarks{display:block;position:absolute;width:20px;height:auto;}
+remark{position:absolute;width:20px;height:20px;border-radius:5px;background-color:#666;text-align:center;line-height:20px;color:#fff;cursor:pointer;}
+remark:hover{background-color:#00ff00};

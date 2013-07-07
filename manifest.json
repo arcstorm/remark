@@ -1,15 +1,24 @@
 {
-  "manifest_version": 2,
+    "manifest_version": 2,
 
-  "name": "remark",
-  "description": "This extension demonstrates a 'browser action' with kittens.",
-  "version": "1.0",
+    "name": "remark",
+    "description": "This extension demonstrates a 'browser action' with kittens.",
+    "version": "1.0",
 
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "remark.html"
-  },
-  "permissions": [
-    "https://secure.flickr.com/"
-  ]
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "remark.html"
+    },
+    "permissions": [
+        "https://secure.flickr.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["res/remark.css"],
+            "js": ["src/remark.js"],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ]
 }
